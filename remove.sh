@@ -1,2 +1,2 @@
-rm -r oxygen/*.deb
+rm -r *.deb
 rm -r Packages.bz2

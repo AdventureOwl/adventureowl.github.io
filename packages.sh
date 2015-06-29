@@ -1,1 +1,1 @@
-dpkg-deb -b oxygen/com.ao.slanted
+dpkg-deb -b com.ao.slanted
