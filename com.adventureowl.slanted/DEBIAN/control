@@ -1,0 +1,10 @@
+Package: com.adventureowl.slanted
+Name: LS Slanted
+Version: 1.1
+Section: Lockscreen HTML
+Homepage: http://adventureowl.github.io
+Maintainer: AdventureOwl <borgen180@gmail.com>
+Architecture: iphoneos-arm
+Description: A simple Lockscreen widget, showing time, date and battery level. Apply with LockHTML or GroovyLock. Options configurable from config.js.
+Author: AdventureOwl <borgen180@gmail.com>
+Sponsor: Stevo <http://apple.com>
