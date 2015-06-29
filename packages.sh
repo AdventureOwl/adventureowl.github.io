@@ -1,1 +1,1 @@
-dpkg-deb -b com.adventureowl.slanted
+dpkg-deb -b oxygen/com.ao.slanted
