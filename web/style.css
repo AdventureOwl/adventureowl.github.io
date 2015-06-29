@@ -1,0 +1,25 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+}
+.container h1{
+	font-size: 7em;
+	font-family: 'yellowtail';
+	margin-top: 20%;
+}
+.container p{
+	font-family: 'ahg';
+}
+
+@font-face{
+	font-family: 'ahg';
+	src:url(AlteHaasGroteskBold.ttf);
+}
+@font-face{
+	font-family: 'yellowtail';
+	src:url(Yellowtail-Regular.otf);
+}
