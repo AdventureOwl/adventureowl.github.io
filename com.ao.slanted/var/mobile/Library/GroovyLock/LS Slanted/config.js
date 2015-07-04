@@ -11,7 +11,7 @@ var yposn = 0;
 //negative numbers move the time up
 //positive numbers move the time down
 //default value is 0
-var taptounlock = false;
+var taptounlock = true;
 //set to true to use the inbuilt groovylock tap to unlock
 //set to false if you want to use your own slider/tap to unlock
 var ypostap = 0;

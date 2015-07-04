@@ -1,0 +1,55 @@
+html *{
+	background-color: white;
+}
+
+.box {
+	padding: 10px 10px 10px 10px;
+
+}
+.title {
+	font-family: 'ubuntu';
+	background-color: #ededed;
+	padding: 15px 20px 15px 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border: 2px solid #ededed;
+}
+.content {
+	background-color: #f9f9f9;
+	padding: 15px 20px 15px 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-top: 0px;
+	border-left: 2px;
+	border-right: 2px;
+	border-bottom: 2px;
+	border-style: solid;
+	border-color: #ededed;
+	font-family: 'ubuntu';
+}
+.content#contact {
+	text-align: center;
+}
+.screenshot {
+	width: 90%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5%;
+	padding-right: 5%;
+	background-color: transparent;
+}
+
+.dp {
+    list-style-type: square;
+    background-color: transparent;
+}
+li {
+	background-color: transparent;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+@font-face{
+	font-family: 'ubuntu';
+	src:url(ubuntu-light.ttf);
+}

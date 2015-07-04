@@ -1,2 +1,2 @@
-dpkg-deb -b -Zlzma LSSlanted
+dpkg-deb -b -Zlzma com.ao.slanted
 
