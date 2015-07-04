@@ -1,2 +1,2 @@
-dpkg-deb -b LSSlanted
-dpkg-deb -b LSToilet
+dpkg-deb -b -Zlzma LSSlanted
+
