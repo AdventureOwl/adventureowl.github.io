@@ -3,11 +3,11 @@
 }
 .title {
 	font-family: 'ubuntu';
-	background-color: #ededed;
+	background-color: #d3d8e2;
 	padding: 15px 20px 15px 20px;
 	margin-left: 5px;
 	margin-right: 5px;
-	border: 2px solid #ededed;
+	border: 2px solid #d3d8e2;
 }
 .content {
 	background-color: #f9f9f9;
@@ -19,7 +19,7 @@
 	border-right: 2px;
 	border-bottom: 2px;
 	border-style: solid;
-	border-color: #ededed;
+	border-color: #d3d8e2;
 	font-family: 'ubuntu';
 }
 .content#contact {
