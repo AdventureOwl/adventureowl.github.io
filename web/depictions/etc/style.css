@@ -2,7 +2,7 @@
 	padding: 5px 0px 5px 0px;
 }
 .title {
-	font-family: 'ubuntu';
+
 	background-color: #d3d8e2;
 	padding: 15px 20px 15px 20px;
 	margin-left: 5px;
@@ -20,7 +20,7 @@
 	border-bottom: 2px;
 	border-style: solid;
 	border-color: #d3d8e2;
-	font-family: 'ubuntu';
+
 }
 .content#contact {
 	text-align: center;
@@ -45,7 +45,7 @@ li {
 	padding-bottom: 5px;
 }
 
-@font-face{
+/*@font-face{
 	font-family: 'ubuntu';
 	src:url(ubuntu-light.ttf);
-}
+}*/
