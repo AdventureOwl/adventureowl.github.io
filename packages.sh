@@ -1,2 +1,2 @@
-dpkg-deb -b com.ao.slanted
-dpkg-deb -b com.ao.toilet
+dpkg-deb -b LSSlanted
+dpkg-deb -b LSToilet
