@@ -4,9 +4,6 @@
 	padding: 0;
 	background-color: #e67e22;
 }
-.container{
-
-}
 .container img#icon {
     position: absolute;
     margin: auto;
@@ -15,16 +12,4 @@
     left: 0;
     right: 0;
     bottom: 0;
-}
-@font-face{
-	font-family: 'ahg';
-	src:url(AlteHaasGroteskBold.ttf);
-}
-@font-face{
-	font-family: 'yellowtail';
-	src:url(Yellowtail-Regular.otf);
-}
-@font-face{
-	font-family: 'kg';
-	src:url(KGALittleSwag.ttf);
 }

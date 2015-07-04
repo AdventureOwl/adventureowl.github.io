@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title>LS Slanted</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!--Added by JunesiPhone-->
+	<link rel="stylesheet" type="text/css" href="etc/style.css">
+	<script src="etc/jquery.min.js"></script>
+	<script src="config.js"></script>
+</head>
+<body onload="fadein()">
+<section class="container">
+		<div id="batteryman"></div>
+		<img id="slide" src="img/slide.png">
+		<img id="tap" src="img/tap.png">
+		<div id="time">Wednesday, 10:31</div>
+		<div id="battery">71%</div>
+		<div id="charging">UNPLUGGED</div>
+		<div id="date">17TH MAY</div>
+		<img id="tang" src="img/tang.png" style="width:320px;height:100px"></img>
+</section>
+<script src="etc/notifications.js"></script>
+<!-- fade in on load -->    
+<script>
+function fadein() {
+	document.getElementById('time').style.top = 129 + ypos + 'px';
+	document.getElementById('batteryman').style.top = 100 + ypos + 'px';
+	document.getElementById('battery').style.top = 110 + ypos + 'px';
+	document.getElementById('charging').style.top = 178 + ypos + 'px';
+	document.getElementById('date').style.top = 178 + ypos + 'px';
+	document.getElementById('tang').style.top = 100 + ypos + 'px';
+	document.getElementById('tap').style.top = 400 + ypostap + 'px';
+	document.getElementById('battery').style.color = topcolor;
+	document.getElementById('charging').style.color = bottomcolor;
+	document.getElementById('date').style.color = bottomcolor;
+	$("#tang").animate({opacity: '1'}, 1500);
+	$("#time").animate({opacity: '1'}, 1500);
+	if (taptounlock == false){
+		$('#tap').hide();
+		$('#slide').hide();
+	} else {
+		$('#tap').show();
+		$('#slide').show();
+		$("#tap").animate({opacity: '1'}, 1500);
+	}
+	loaded = true;
+}
+</script>
+<!-- battery --> 
+<script src="etc/infostats.js"></script>
+<script>
+batteryStats({
+  refresh : batteryinterval, // in milliseconds
+  success: function(battery){
+	document.getElementById('battery').innerHTML = battery.percent + '%';
+	document.getElementById('charging').innerHTML = battery.charging;
+  }
+});
+</script>
+<!-- clock --> 
+<script src="etc/clock.js"></script>
+<script>
+	clock({
+		twentyfour : false,
+		padzero : false,
+		refresh : clockinterval, // in milliseconds
+		success: function(clock){
+			document.getElementById('time').innerHTML = clock.daytext() + ", " + clock.hour() + ":" + clock.minute();
+			document.getElementById('date').innerHTML = clock.dateplus() + " " + clock.monthtext();
+		}
+	});
+</script> 
+<!-- tap for extra info animation and fade out -->
+<script>
+function battery() {
+    $("#battery").animate({opacity: '1'}, "slow");
+    if (showdate == true) {
+    	$("#date").animate({opacity: '1'}, "slow");
+    }
+    else {
+    	$("#charging").animate({opacity: '1'}, "slow");
+	}
+	var myVar;
+    myVar = setTimeout(alertFunc, infofade);
+	function alertFunc() {
+  		$("#battery").animate({opacity: '0'}, "slow");
+  		$("#date").animate({opacity: '0'}, "slow");
+  		$("#charging").animate({opacity: '0'}, "slow");
+	}
+}
+</script>
+<!-- tap detection -->
+<script>
+document.getElementById('batteryman').addEventListener('touchstart',function(){
+	battery();
+});
+document.getElementById('tap').addEventListener('touchstart',function(){
+	groovyAPI.unlockPhone();
+});
+</script>
+<!-- scaling for other devices --> 
+<script>
+(function () {
+    'use strict';
+    if (window.innerWidth === 375) {
+        document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=1.18, maximum-scale=1.18, user-scalable=0');
+    } else if (window.innerWidth > 375) {
+        document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=1.3, maximum-scale=1.3, user-scalable=0');
+    }
+}());
+</script>
+</body>
+</html>

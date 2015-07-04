@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>Toilet</title>
+	<link rel="stylesheet" type="text/css" href="etc/style.css">
+	<script src="etc/jquery.min.js"></script>
+</head>
+<body>
+<section class="container">
+	<div id="tang"></div>
+	<div id="boxbg"></div>
+		<div id="hour">12</div>
+		<div id="min">13</div>
+		<img id="pic" src="img/nude.png" style="width:320px;height:568px"></img>
+</section>
+<script src="etc/clock.js"></script>
+<script>
+	clock({
+		twentyfour : false,
+		padzero : true,
+		refresh : 1000, // in milliseconds
+		success: function(clock){
+			document.getElementById('hour').innerHTML = clock.hour();
+			document.getElementById('min').innerHTML = clock.minute();
+			if(groovyAPI.isShowingNotifications()) {
+				position();
+			}
+		}
+	});
+</script>
+<script src="etc/infostats.js"></script>
+<script>
+batteryStats({
+  refresh : 1000, // in milliseconds
+  success: function(battery){
+		document.getElementById('tang').style.width = battery.percent * 3.2 + "px"; 
+  }
+});
+</script>
+<script>
+function position() {
+    $("#hour").animate({top: '105px'}, "slow");
+    $("#min").animate({top: '105px'}, "slow");
+    $("#pic").animate({top: '-115px'}, "slow");
+}
+</script>
+</body>
+</html>
+
+<!--		document.getElementById('battery').innerHTML = battery.percent + '%';
+    	document.getElementById('charging').innerHTML = battery.charging;-->
