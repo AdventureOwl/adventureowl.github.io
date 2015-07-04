@@ -1,24 +1,19 @@
-html *{
-	background-color: white;
-}
-
 .box {
-	padding: 10px 10px 10px 10px;
-
+	padding: 10px 0px 10px 0px;
 }
 .title {
 	font-family: 'ubuntu';
 	background-color: #ededed;
 	padding: 15px 20px 15px 20px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
 	border: 2px solid #ededed;
 }
 .content {
 	background-color: #f9f9f9;
 	padding: 15px 20px 15px 20px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
 	border-top: 0px;
 	border-left: 2px;
 	border-right: 2px;
@@ -31,21 +26,23 @@ html *{
 	text-align: center;
 }
 .screenshot {
-	width: 90%;
+	width: 94%;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 3%;
+	padding-right: 3%;
 	background-color: transparent;
 }
 
 .dp {
     list-style-type: square;
     background-color: transparent;
+    padding-right: 0px;
 }
 li {
 	background-color: transparent;
 	padding-top: 5px;
+	padding-right: 0px;
 	padding-bottom: 5px;
 }
 
