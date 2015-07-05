@@ -1,3 +1,6 @@
+var device = '5';
+//please enter your iphone model (or the model of your upscaled resolution)
+//supported - '5', '5c', '5s', '6', '6+''
 var showdate = true;
 //set to true to show the date
 //set to false to show the battery state (charging or unplugged)
@@ -48,9 +51,3 @@ var infofade = 3000;
 //want to replace the inbuilt slide to unlock image (notification view)?
 //simply replace slide.png in the img folder
 //you may also have to change the width value for .container img#tap and .container img#slide in etc/style.css
-
-//AHHHHH!! DON'T TOUCH THESE BAD BOYS!
-var loaded = false;
-var note = false;
-//setting these to true will probably mess up notifications
-//don't do it man
