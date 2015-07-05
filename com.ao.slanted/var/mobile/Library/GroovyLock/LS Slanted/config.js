@@ -1,5 +1,6 @@
-var device = '5';
-//please enter your iphone model (or the model of your upscaled resolution)
+var device = 'detect';
+//leave as detect to have the widget automatically scaled
+//enter your iphone model (or the model of your upscaled resolution) to overrride this
 //supported - '5', '5c', '5s', '6', '6+''
 var showdate = true;
 //set to true to show the date
