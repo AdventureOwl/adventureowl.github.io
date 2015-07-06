@@ -4,11 +4,13 @@
 }
 .title {
 
-	background-color: #d3d8e2;
+	background-color: #e6e6e6;
 	padding: 15px 20px 15px 20px;
 	margin-left: 5px;
 	margin-right: 5px;
-	border: 2px solid #d3d8e2;
+	border: 2px solid #e6e6e6;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 .content {
 	background-color: #f9f9f9;
@@ -20,8 +22,9 @@
 	border-right: 2px;
 	border-bottom: 2px;
 	border-style: solid;
-	border-color: #d3d8e2;
-
+	border-color: #e6e6e6;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 .content#contact {
 	text-align: center;
