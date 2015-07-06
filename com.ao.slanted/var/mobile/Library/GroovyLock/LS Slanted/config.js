@@ -34,6 +34,10 @@ var topcolor = '000000';
 var bottomcolor = '000000';
 //this changes the color of the battery state or date text (below the time)
 //default value is '000000'
+var loadfadein = 1500;
+//this represents the length of the initial fade in animation in milliseconds
+//default value is 1500 (1.5 seconds)
+//to remove the animation completely, set to 0
 var clockinterval = 1000;
 //this represents the update interval of the clock/date in milliseconds
 //default value is 1000 (1 second)

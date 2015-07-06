@@ -32,15 +32,15 @@ function fadein() {
 	document.getElementById('battery').style.color = topcolor;
 	document.getElementById('charging').style.color = bottomcolor;
 	document.getElementById('date').style.color = bottomcolor;
-	$("#tang").animate({opacity: '1'}, 1500);
-	$("#time").animate({opacity: '1'}, 1500);
+	$("#tang").animate({opacity: '1'}, loadfadein);
+	$("#time").animate({opacity: '1'}, loadfadein);
 	if (taptounlock == false){
 		$('#tap').hide();
 		$('#slide').hide();
 	} else {
 		$('#tap').show();
 		$('#slide').show();
-		$("#tap").animate({opacity: '1'}, 1500);
+		$("#tap").animate({opacity: '1'}, loadfadein);
 	}
 	loaded = true;
 }
