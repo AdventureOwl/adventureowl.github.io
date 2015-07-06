@@ -1,7 +1,7 @@
 var device = 'detect';
 //leave as detect to have the widget automatically scaled
 //enter your iphone model (or the model of your upscaled resolution) to overrride this
-//supported - '5', '5c', '5s', '6', '6+', 'iPad'
+//supported - '5', '5c', '5s', '6', '6+'
 var showdate = true;
 //set to true to show the date
 //set to false to show the battery state (charging or unplugged)
