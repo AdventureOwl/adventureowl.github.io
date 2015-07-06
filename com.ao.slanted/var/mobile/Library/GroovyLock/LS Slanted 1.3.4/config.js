@@ -1,10 +1,13 @@
 var device = 'detect';
 //leave as detect to have the widget automatically scaled
 //enter your iphone model (or the model of your upscaled resolution) to overrride this
-//supported - '5', '5c', '5s', '6', '6+''
+//supported - '5', '5c', '5s', '6', '6+', 'iPad'
 var showdate = true;
 //set to true to show the date
 //set to false to show the battery state (charging or unplugged)
+var twentyfourhr = false;
+//set to false to use the 12hr clock
+//set to true to use the 24hr clock
 var ypos = 0;
 //this value moves the time and battery/date info up/down
 //negative numbers move the time up

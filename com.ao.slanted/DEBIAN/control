@@ -1,6 +1,6 @@
 Package: com.ao.slanted
 Name: LS Slanted
-Version: 1.3.2
+Version: 1.3.4
 Architecture: iphoneos-arm
 Description: A sexy LS Widget showing time, date and battery level with inbuilt tap to unlock!
 Depiction: http://adventureowl.github.io/web/depictions/slanted.html
