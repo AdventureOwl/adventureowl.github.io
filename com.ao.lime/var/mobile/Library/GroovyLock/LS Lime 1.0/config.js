@@ -44,9 +44,9 @@ var FadeIn = 1500;
 var ClockInterval = 3000;
 //sets the update interval for the clock
 //default value is 3000 (3 seconds)
-var BatteryInterval = 10000;
+var BatteryInterval = 8000;
 //sets the update interval for the battery bar
-//default value is 10000 (10 seconds)
+//default value is 8000 (8 seconds)
 var NotificationInterval = 2000;
 //sets the update interval for the notification check
 //default value is 2000 (2 seconds)
