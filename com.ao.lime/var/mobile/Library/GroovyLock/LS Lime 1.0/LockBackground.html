@@ -67,6 +67,8 @@ batteryStats({
 		success: function(clock){
 			document.getElementById('t1').innerHTML = clock.hour();
 			document.getElementById('t2').innerHTML = clock.minute();
+			document.getElementById('d1').innerHTML = clock.monthtext();
+			document.getElementById('d2').innerHTML = clock.date();
 		}
 	});
 </script> 

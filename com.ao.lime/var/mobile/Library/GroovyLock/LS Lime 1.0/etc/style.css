@@ -29,6 +29,7 @@
 	text-align: center;
 	color: #000000;
 	opacity: 0;
+	text-transform: uppercase;
 }
 .date span#d1 {
 	font-family: 'rb'
