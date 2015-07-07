@@ -1,0 +1,11 @@
+Package: com.ao.lime
+Name: LS Lime
+Version: 1.0
+Architecture: iphoneos-arm
+Description: An awesome LS Widget showing time and date with a battery bar with inbuilt tap to unlock!
+Depiction: http://adventureowl.github.io/web/depictions/lime.html
+Homepage: http://adventureowl.github.io/
+Depends: com.matchstic.infostats
+Author: AdventureOwl <borgen180@gmail.com>
+Maintainer: AdventureOwl <borgen180@gmail.com>
+Section: Themes

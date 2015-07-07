@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LS Lime</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="etc/style.css">
+	<script src="config.js"></script>
+	<script src="etc/jquery.min.js"></script>
+	<script src="etc/sizing.js"></script>
+	<script src="etc/load.js"></script>
+</head>
+<body onload="load()">
+	<section class="container">
+	<div class="r2" id="r2"></div>
+		<div class="r1" id="r1"></div>
+		
+		<div class="date" id="date">
+			<span id="d1">JULY</span><span id="d2">30</span>
+		</div>
+		<div class="time" id="time">
+			<span id="t1">09</span><span id="t2">41</span>
+		</div>
+		<img class="tap" id="tap" src="img/tap.png">
+		<img class="slide" id="slide" src="img/slide.png">
+	</section>
+<script src="etc/notifications.js"></script>
+<script>
+function date() {
+	$("#date").animate({opacity: '1'}, "slow");
+	setTimeout(function(){
+        $("#date").animate({opacity: '0'}, "slow");
+    },InfoFade)
+}
+</script>
+<script>
+document.getElementById('tap').addEventListener('touchstart',function(){
+		groovyAPI.unlockPhone();
+	});
+	document.getElementById('slide').addEventListener('touchstart',function(){
+		groovyAPI.unlockPhone();
+	});
+</script>
+<script>
+	document.getElementById('time').addEventListener('touchstart',function(){
+		if (AlwaysDate == false){
+			date();
+		}
+	});
+</script>
+<script src="etc/infostats.js"></script>
+<script>
+batteryStats({
+  refresh : BatteryInterval,
+  success: function(battery){
+  	var batlever = battery.percent;
+	document.getElementById('r2').style.width = batlever * 3.2 + "px";
+	document.getElementById('r1').style.width = 320 - batlever * 3.2 + "px";
+  }
+});
+</script>
+<script src="etc/clock.js"></script>
+<script>
+	clock({
+		twentyfour : TwentyFour,
+		padzero : true,
+		refresh : ClockInterval,
+		success: function(clock){
+			document.getElementById('t1').innerHTML = clock.hour();
+			document.getElementById('t2').innerHTML = clock.minute();
+		}
+	});
+</script> 
+</body>
+</html>
