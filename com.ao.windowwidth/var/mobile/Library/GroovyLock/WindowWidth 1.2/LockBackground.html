@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WindowWidth</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="etc/style.css">
+</head>
+<body onload="ww()">
+<section class="container">
+	<div class="text">
+		<span id="t1">The Width is </span>
+		<span id="t2">Over 9000</span>
+	</div>
+	<div class="text2">
+		<span id="t3">Upscaled by </span>
+		<span id="t4">1,000,000</span>
+	</div>
+</section>
+<script>
+	var widthpx = window.innerWidth;
+	var scale = window.innerWidth / 320;
+	function ww() {
+		document.getElementById('t2').innerHTML = widthpx;
+		document.getElementById('t4').innerHTML = scale;
+		document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=' + scale + ', maximum-scale=' + scale + ', user-scalable=0');
+	}
+</script>
+</body>
+</html>

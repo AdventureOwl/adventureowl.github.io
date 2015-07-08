@@ -1,0 +1,10 @@
+Package: com.ao.windowwidth
+Name: LS WindowWidth
+Version: 1.2
+Architecture: iphoneos-arm
+Description: More of an experiment than a theme.
+Depiction: http://adventureowl.github.io/web/depictions/windowwidth.html
+Homepage: http://adventureowl.github.io/
+Author: AdventureOwl <borgen180@gmail.com>
+Maintainer: AdventureOwl <borgen180@gmail.com>
+Section: Themes
