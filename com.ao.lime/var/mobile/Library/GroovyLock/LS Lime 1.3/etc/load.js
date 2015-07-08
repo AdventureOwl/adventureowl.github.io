@@ -14,12 +14,17 @@ function load() {
 		$('#tap').hide();
 		$('#slide').hide();
 	}
-	
-	
+	if (AlwaysSlideToUnlock == true){
+		document.getElementById('tap').src="img/slide.png"
+	}
 	document.getElementById('time').style.color = TimeColour;
 	document.getElementById('date').style.color = DateColour;
 	document.getElementById('r1').style.backgroundColor = BackgroundRectangleColour;
 	document.getElementById('r2').style.backgroundColor = BatteryRectangleColour;
+
+	document.getElementById('r1').style.borderBottomRightRadius = BatteryBarRightCornerRoundness + 'px';
+	document.getElementById('r2').style.borderBottomLeftRadius = BatteryBarLeftCornerRoundness + 'px';
+
 	document.getElementById('time').style.top = TimeYPos + "px";
 	document.getElementById('tap').style.top = TapYPos + "px";
 	document.getElementById('slide').style.top = TapNotificationYPos + "px";

@@ -33,12 +33,14 @@ function date() {
 }
 </script>
 <script>
-document.getElementById('tap').addEventListener('touchstart',function(){
+if (AlwaysSlideToUnlock == false){
+	document.getElementById('tap').addEventListener('touchstart',function(){
 		groovyAPI.unlockPhone();
 	});
 	document.getElementById('slide').addEventListener('touchstart',function(){
 		groovyAPI.unlockPhone();
-	});
+	});	
+}
 </script>
 <script>
 	document.getElementById('time').addEventListener('touchstart',function(){
@@ -46,6 +48,7 @@ document.getElementById('tap').addEventListener('touchstart',function(){
 			date();
 		}
 	});
+
 </script>
 <script src="etc/infostats.js"></script>
 <script>

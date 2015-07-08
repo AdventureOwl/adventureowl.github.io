@@ -38,6 +38,14 @@ var BatteryRectangleOpacity = 0.6;
 var BackgroundRectangleOpacity = 0.2;
 //sets the opacity of the battery background bar (right side)
 //default value is 0.2
+var BatteryBarLeftCornerRoundness = 0;
+//sets the curvature of the left corner of the battery bar
+//20 is completely round
+//0 is rectangular
+var BatteryBarRightCornerRoundness = 0;
+//sets the curvature of the right corner of the battery bar
+//20 is completely round
+//0 is rectangular
 var FadeIn = 1500;
 //sets the length of the initial, on load fade in, in milliseconds
 //default value is 1500 (1.5 seconds)
@@ -47,9 +55,9 @@ var ClockInterval = 3000;
 var BatteryInterval = 8000;
 //sets the update interval for the battery bar
 //default value is 8000 (8 seconds)
-var NotificationInterval = 2000;
+var NotificationInterval = 1000;
 //sets the update interval for the notification check
-//default value is 2000 (2 seconds)
+//default value is 1000 (1 second)
 var InfoFade = 3000;
 //sets the length of time before the date fades
 //default value is 3000
@@ -63,6 +71,8 @@ var ShowTapToUnlock = true;
 //set to false to hide the tap to unlock and slide to unlock
 var AlwaysDate = false;
 //set to true to always show the date
+var AlwaysSlideToUnlock = false;
+//set to true to always show the slide to unlock image (if you have a passcode)
 var TapToUnlockWidth = 50;
 //sets the width (and size) of the tap to unlock image
 //default value is 50
