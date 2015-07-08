@@ -37,6 +37,32 @@
 .date span#d2 {
 	font-family: 'rl'
 }
+.beeper {
+	position: absolute;
+	font-size: 1em;
+	width: 320px;
+	top: 1px;
+	text-align: center;
+	color: #ffffff;
+	opacity: 0;
+	z-index: 4;
+	text-transform: uppercase;
+}
+.beeper span#bee {
+	font-family: 'rb'
+}
+.beeper span#per {
+	font-family: 'rl'
+}
+.touchbox {
+	position: absolute;
+	width: 320px;
+	height: 50px;
+	background-color: #ff0000;
+	left: 0px;
+	opacity: 0;
+	z-index: 3;
+}
 .r1 {
 	position: absolute;
 	width: 180px;

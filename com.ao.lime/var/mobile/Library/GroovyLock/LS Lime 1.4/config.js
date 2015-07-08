@@ -20,6 +20,9 @@ var TimeNotificationYPos = 70;
 var RelativeDateYPos = -18;
 //sets the y-position of the date relative to the time
 //default value is -18
+var BatteryPercentageColour = '#ffffff';
+//sets the colour of the battery percentage the shows when you tap on the battery bar
+//default value is '#ffffff'
 var TimeColour = '#ffffff';
 //sets the colour of the time
 //default value is '#ffffff'
@@ -65,6 +68,8 @@ var ShowDate = true;
 //set to false to hide the date
 var ShowBatteryBar = true;
 //set to false to hide the battery bar
+var ShowBatteryPercentage = true;
+//set to false to hide the battery % which appears on tap
 var ShowTime = true;
 //set to false to hide the time
 var ShowTapToUnlock = true;

@@ -19,6 +19,7 @@ function load() {
 	}
 	document.getElementById('time').style.color = TimeColour;
 	document.getElementById('date').style.color = DateColour;
+	document.getElementById('beeper').style.color = BatteryPercentageColour;
 	document.getElementById('r1').style.backgroundColor = BackgroundRectangleColour;
 	document.getElementById('r2').style.backgroundColor = BatteryRectangleColour;
 

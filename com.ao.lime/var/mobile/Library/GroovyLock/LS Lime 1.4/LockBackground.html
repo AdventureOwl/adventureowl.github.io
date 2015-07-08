@@ -11,6 +11,10 @@
 </head>
 <body onload="load()">
 	<section class="container">
+	<div class="touchbox" id="touchbox"></div>
+	<div class="beeper" id="beeper">
+			<span id="bee">71</span><span id="per">%</span>
+		</div>
 	<div class="r2" id="r2"></div>
 		<div class="r1" id="r1"></div>
 		
@@ -48,7 +52,14 @@ if (AlwaysSlideToUnlock == false){
 			date();
 		}
 	});
-
+	document.getElementById('touchbox').addEventListener('touchstart',function(){
+		if (ShowBatteryPercentage == true){
+			$("#beeper").animate({opacity: '1'}, "slow");
+			setTimeout(function(){
+        		$("#beeper").animate({opacity: '0'}, "slow");
+    		},InfoFade)
+		}
+	});
 </script>
 <script src="etc/infostats.js"></script>
 <script>
@@ -56,6 +67,7 @@ batteryStats({
   refresh : BatteryInterval,
   success: function(battery){
   	var batlever = battery.percent;
+  	document.getElementById('bee').innerHTML = batlever;
 	document.getElementById('r2').style.width = batlever * 3.2 + "px";
 	document.getElementById('r1').style.width = 320 - batlever * 3.2 + "px";
   }
