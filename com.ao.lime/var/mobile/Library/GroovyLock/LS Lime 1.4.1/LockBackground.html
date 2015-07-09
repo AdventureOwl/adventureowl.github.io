@@ -9,7 +9,7 @@
 	
 	<script src="etc/load.js"></script>
 </head>
-<body onload="load()">
+<body onload="load(); ww();">
 	<section class="container">
 	<div class="touchbox" id="touchbox"></div>
 	<div class="beeper" id="beeper">
@@ -70,6 +70,7 @@ batteryStats({
   	document.getElementById('bee').innerHTML = batlever;
 	document.getElementById('r2').style.width = batlever * 3.2 + "px";
 	document.getElementById('r1').style.width = 320 - batlever * 3.2 + "px";
+	document.getElementById('r1').style.left = batlever * 3.2 + "px";
   }
 });
 </script>
@@ -87,6 +88,19 @@ batteryStats({
 		}
 	});
 </script> 
-<script src="etc/sizing.js"></script>
+<script>
+	var scale = window.innerWidth / 320;
+	function ww() {
+		if (Device == 'Detect') {
+		document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=' + scale + ', maximum-scale=' + scale + ', user-scalable=0');
+		}
+		else if (Device == '6') {
+        document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=1.18, maximum-scale=1.18, user-scalable=0');
+    	}
+    	else if (Device == '6+') {
+        document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=1.3, maximum-scale=1.3, user-scalable=0');
+		}
+	}
+</script>
 </body>
 </html>
