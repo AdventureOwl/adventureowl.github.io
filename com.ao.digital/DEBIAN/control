@@ -1,0 +1,11 @@
+Package: com.ao.digital
+Name: LS Digital
+Version: 1.0
+Architecture: iphoneos-arm
+Description: A super cool LS Widget showing time and battery and a matching SBHTML partner.
+Depiction: http://adventureowl.github.io/web/depictions/digital.html
+Homepage: http://adventureowl.github.io/
+Depends: com.matchstic.infostats
+Author: AdventureOwl <borgen180@gmail.com>
+Maintainer: AdventureOwl <borgen180@gmail.com>
+Section: Themes

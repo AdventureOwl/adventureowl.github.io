@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LS Digital</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="etc/style.css">
+	<script src="config.js"></script>
+	<script src="etc/jquery.min.js"></script>
+	<script src="etc/load.js"></script>
+</head>
+<body onload="load(); size();">
+	<section class="container">
+		<div id="time">10:36</div>
+		<div id="battery"></div>
+		<div id="batterybg"></div>
+	</section>
+<script src="etc/notifications.js"></script>
+<script src="etc/infostats.js"></script>
+<script>
+batteryStats({
+  refresh : BatteryInterval,
+  success: function(battery){
+  		document.getElementById('battery').style.width = battery.percent + 'px';
+  }
+});
+</script>
+<script src="etc/clock.js"></script>
+<script>
+	clock({
+		twentyfour : TwentyFour,
+		padzero : true,
+		refresh : ClockInterval,
+		success: function(clock){
+			document.getElementById('time').innerHTML = clock.hour() + ":" + clock.minute();
+		}
+	});
+</script> 
+<script>
+	var DoubleScale = window.innerWidth / 320 / 2;
+	var NormalScale = window.innerWidth / 320;
+	function size() {
+		if (UseDoubleScale){
+		document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=' + DoubleScale + ', maximum-scale=' + DoubleScale + ', user-scalable=0');
+		} else {
+		document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=' + NormalScale + ', maximum-scale=' + NormalScale + ', user-scalable=0');
+		}
+	}
+
+	/*function size() {
+		if (DeviceWidth == 0){
+			if (UseDoubleScale == true){
+				document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=' + AutoDoubleScale + ', maximum-scale=' + AutoDoubleScale + ', user-scalable=0');
+			}
+			else if (UseDoubleScale == false){
+				document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=' + AutoNormalScale + ', maximum-scale=' + AutoNormalScale + ', user-scalable=0');
+			}
+		} else {
+			if (UseDoubleScale == true){
+				document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=' + DoubleScale + ', maximum-scale=' + DoubleScale + ', user-scalable=0');
+			}
+			else if (UseDoubleScale == false){
+				document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=' + NormalScale + ', maximum-scale=' + NormalScale + ', user-scalable=0');
+			}
+		}*/
+</script>
+</body>
+</html>
